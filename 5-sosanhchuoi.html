@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đếm kí tự mảng</title>
+</head>
+<body>
+    <h1>Đếm kí tự mảng</h1>
+    <input type="text" id="txt" placeholder="Enter text 1">
+    <input type="text" id="txt1" placeholder="Enter text 2">
+    <button type="button" onclick="sosanh()">So sánh</button>
+    <p id="arr"></p>
+    <p id="result"></p>
+    <script>
+        function sosanh(){
+            let result;
+            let str=document.getElementById('txt').value;
+            let arr=str.split('');
+            let str1=document.getElementById('txt1').value;
+            let arr1=str1.split('');
+            for(let i=0;i<arr.length;i++){
+                for(let j=0;j<arr1.length;j++){
+                    if(arr[i]==arr1[j]){
+                        result='2 mảng chứa kí tự giống nhau';
+                    }
+                    else{
+                        result='2 mảng chứa kí tự khác nhau';
+                    }
+                }
+            }
+            // document.getElementById('arr').innerHTML='Mảng gồm: '+arr.join('; ');
+            document.getElementById('result').innerHTML=result;
+        }
+    </script>
+</body>
+</html>

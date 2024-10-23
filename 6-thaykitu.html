@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thay thế kí tự</title>
+</head>
+<body>
+    <h1>Thay thế kí tự</h1>
+    <input type="text" id="txt" placeholder="Enter text">
+    <button type="button" onclick="thaythe()">Thay thế "_"</button>
+    <p id="arr"></p>
+    <p id="result"></p>
+    <script>
+        function thaythe(){
+            let result=[];
+            let str=document.getElementById('txt').value;
+            let arr=str.split('');
+            for(let i=0;i<arr.length;i++){
+                if(arr[i]=="-"){
+                    arr[i]='_';
+                }
+                result+=arr[i];
+            }
+            document.getElementById('result').innerHTML='Mảng sau khi đổi là: '+result;
+        }
+    </script>
+</body>
+</html>

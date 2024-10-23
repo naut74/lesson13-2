@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đảo kí tự</title>
+</head>
+<body>
+    <h1>Đảo kí tự</h1>
+    <input type="text" id="txt">
+    <button type="button" onclick="daokitu()">Đảo</button>
+    <p id="result"></p>
+    <script>
+        function daokitu(){
+            let str=document.getElementById('txt').value;
+            let temp;
+            let arr=str.split('')
+            let first=0;
+            let last=arr.length - 1;
+            while(first<last){
+                let temp=arr[first];
+                arr[first]=arr[last];
+                arr[last]=temp;
+                first++;
+                last--;
+            }
+            document.getElementById('result').innerHTML=arr.join('');
+        }
+    </script>
+</body>
+</html>

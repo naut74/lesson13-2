@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Khai báo mảng</title>
+</head>
+<body>
+    <h1>Khai báo mảng</h1>
+    <input type="text" id="txt" placeholder="Enter text">
+    <button type="button" onclick="khaibao()">Khai báo</button>
+    <p id="arr"></p>
+    <p id="result"></p>
+    <script>
+        function khaibao(){
+            let str=document.getElementById('txt').value;
+            let arr=str.split('');
+            document.getElementById('arr').innerHTML='Mảng gồm: '+arr.join('; ');
+            document.getElementById('result').innerHTML='Số ký tự của mảng là: '+arr.length;
+        }
+    </script>
+</body>
+</html>
